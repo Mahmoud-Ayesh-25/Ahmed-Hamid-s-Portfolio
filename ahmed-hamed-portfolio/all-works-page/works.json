@@ -1,0 +1,50 @@
+[
+    {
+        "title": "Work number 1",
+        "description": "anything anything anything anything anything anything",
+        "catagory": "VIDEO EDITING",
+        "thumbnail": "images/Scrap Mechanic Screenshot 2026.08.14 - 12.51.30.52.png",
+        "video-url": "https://youtube.com/embed/ci3c8STRd1M?si=sB1iTQ7pum_31yod",
+        "is-short": "yes"
+    },
+    {
+        "title": "Work number 2 ",
+        "description": "anything",
+        "catagory": "ILLUSTRATION",
+        "thumbnail": "images/Resident Evil 7 Screenshot 2026.06.30 - 23.33.16.94.png",
+        "video-url": "https://www.youtube.com/embed/oEYo7aSorNY?si=3612_Kq3yP7zVA3_",
+        "is-short": "yes"
+    },
+    {
+        "title": "Work number 4",
+        "description": "anything anything anything anything anything anything",
+        "catagory": "TYPOGRAPHY",
+        "thumbnail": "../main-3-works-media/card-03.png",
+        "video-url": "https://youtube.com/embed/ci3c8STRd1M?si=sB1iTQ7pum_31yod",
+        "is-short": "yes"
+    },
+    {
+        "title": "Work number 5",
+        "description": "anything anything anything anything anything anything",
+        "catagory": "ILLUSTRATION",
+        "thumbnail": "../main-3-works-media/Dcotor.jpeg",
+        "video-url": "https://www.youtube.com/embed/DIz6wi0-V68?si=yEAG-0XfF_4VnIe3",
+        "is-short": "no"
+    },
+    {
+        "title": "Work number 6",
+        "description": "anything anything anything anything anything anything",
+        "catagory": "BRAND IDENTITIES",
+        "thumbnail": "../main-3-works-media/card-03.png",
+        "video-url": "https://www.youtube.com/embed/oEYo7aSorNY?si=3612_Kq3yP7zVA3_",
+        "is-short": "no"
+    },
+    {
+        "title": "Work number 7",
+        "description": "anything anything anything anything anything anything",
+        "catagory": "MOTION GRAPHICS",
+        "thumbnail": "../main-3-works-media/card-02-boy-v3.png",
+        "video-url": "https://youtube.com/embed/ci3c8STRd1M?si=sB1iTQ7pum_31yod",
+        "is-short": "yes"
+    }
+]

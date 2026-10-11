@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Card 11",
+        "thump": "images/website.png",
+        "video-url": "https://youtube.com/embed/ci3c8STRd1M?si=sB1iTQ7pum_31yod",
+        "alt": "thumbnail for xyz project, important for accessability",
+        "is-short": "no"
+    },
+    {
+        "title": "Card 22",
+        "thump": "images/Resident Evil  Village Biohazard Village Screenshot 2026.07.04 - 00.33.39.35.png",
+        "video-url": "https://www.youtube.com/embed/CTKZUEb4AVc?si=fWKAZ1WaI7gkG_v0",
+        "alt": "alt",
+        "is-short": "no"
+    },
+    {
+        "title": "Card 3",
+        "thump": "main-3-works-media/card-03.png",
+        "video-url": "https://www.youtube.com/embed/oEYo7aSorNY?si=3612_Kq3yP7zVA3_",
+        "alt": "thumbnail for xyz project, important for accessability",
+        "is-short": "no"
+    }
+]

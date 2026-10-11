@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        fieldset{
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        input{
+            width: 400px;
+        }
+
+        textarea{
+            width: 400px;
+            height: 50px;
+        }
+
+        fieldset div fieldset{
+            width: calc(100% - 2rem);
+        }
+
+        button{
+            width: 100px;
+        }
+        #red-part{
+            color: red;
+        }
+
+        label input{
+            width: auto;
+        }
+
+        #select-folder{
+            margin-left: calc(50% - 75px);
+            width: 200px;
+            height: 70px;
+            outline: 3px solid red;
+        }
+
+        .work-div{
+            display: grid;
+            grid-template-columns: 1fr auto;
+            grid-template-areas: "inputes buttons";
+        }
+
+        .all-works-buttons{
+            grid-area: buttons;
+            display: flex;
+            flex-direction: column;
+            padding: 8px;
+            gap: 5px;
+            height: calc(100% - 10px);
+        }
+
+        .delete-button{
+            margin-top: 100px;
+        }
+
+        select{
+            width: 200px;
+        }
+
+        #bottom-buttons{
+            display: flex;
+            margin-top: 20px;
+            padding-right: 8px;
+        }
+
+        #add-new-button{
+            display: none;
+            margin-left: 20px;
+        }
+
+        #save-button{
+            display: none;
+        }
+    </style>
+    <script src="script.js" defer></script>
+    <title>All Works Controller</title>
+</head>
+<body>
+    <button onclick="get_folder()" id="select-folder">Select Project's Folder</button>
+
+    <fieldset>
+        <legend>All Works</legend>
+        <div id="all-works-fs">
+        </div>
+        <div id="bottom-buttons">
+            <button onclick="save_works()" id="save-button">SAVE</button>
+            <button id="add-new-button" onclick="add_new_work()">ADD NEW</button>
+        </div>
+    </fieldset>
+</body>
+</html>

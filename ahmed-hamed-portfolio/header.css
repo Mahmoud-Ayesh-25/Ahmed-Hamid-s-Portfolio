@@ -1,0 +1,441 @@
+header{
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 75px auto;
+    grid-template-areas: ". nav ." ". intro .";
+    width: 100%;
+    background-image: linear-gradient(to right, rgb(19, 19, 19) 0% , black 50%, black 100%);
+    border-bottom: 3px solid var(--mn-theme-clr);
+    box-shadow: 0px 0px 20px var(--mn-theme-clr);
+    z-index: 2;
+}
+
+nav{
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-areas: "logo list .";
+    width: 100%;
+    padding: 0px 40px;
+    margin: 10px 0px 0px 0px;
+    position: relative;
+    animation: nav-start 1s ease 0s 1 forwards;
+}
+
+#header-options-button{
+    grid-area: list;
+    display: none;
+    width: 50px;
+    height: 50px;
+    justify-self: end;
+    border: none;
+    background-color: transparent;
+    position: relative;
+}
+
+#header-options-button svg{
+    fill: var(--mn-text-clr);
+    width: 100%;
+    height: 100%;
+}
+
+#options-dialog{
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    border: none; padding: 0;
+    background-color: transparent;
+}
+
+#dialog-options-container{
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    align-items: center;
+    position: relative;
+    height: 100%;
+
+    transform: translateX(200%);
+
+    box-shadow: 0px 0px 10px black;
+    padding-top: 20%;
+}
+
+#dialog-options-container a{ 
+    display: block;
+    width: 100%;
+    color: var(--mn-text-clr);
+    text-align: center;
+}
+
+#dialog-options-container.open{
+    animation: options-open 0.3s ease 0s 1 forwards;
+}
+
+@keyframes options-open {
+    0%{
+        transform: translateX(200%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+#dialog-options-container.close{
+    animation: options-close 0.3s ease 0s 1 forwards;
+}
+
+@keyframes options-close {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(200%);
+    }
+}
+
+#header-icon{
+    grid-area: logo;
+    font-size: 30px;
+    font-weight: bold;
+    align-self: center;
+}
+
+#header-options{
+    grid-area: list;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 10%;
+    align-items: center;
+}
+
+#header-options li a{
+    background: linear-gradient(
+        to right,
+        var(--mn-theme-clr) 0%,
+        var(--mn-theme-clr) 50%,
+        var(--mn-text-clr) 50%
+        );
+    
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: right;
+    
+    font-weight: bold;
+    display: inline-block;
+    transition: background 0.3s ease, letter-spacing 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.5);
+
+    white-space: nowrap;
+}
+
+#header-options li a:hover{
+    background-position: left;
+    letter-spacing: 2px;
+}
+
+#intro{
+    grid-area: intro;
+    height: fit-content;
+    position: relative;
+    display: grid;
+    grid-template-columns: 5% 25% 1fr 13% 5%;
+    grid-template-areas: ". about image achievements .";
+}
+
+#intro::before{
+    content: "";
+    z-index: 0;
+    background-image: url("images/portfolio-title.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-height: 100%;
+    aspect-ratio: 100/65;
+    position: absolute;
+    left: 0px;
+    top: -20px;
+}
+
+#intro figure{
+    grid-area: image;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    z-index: 1;
+    animation: figure-start 1s ease 0s 1 forwards;
+    transform-origin: center bottom;
+    max-width: 800px;
+}
+
+#about{
+    margin-top: 150px;
+    grid-area: about;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    z-index: 1;
+}
+
+#hello{
+    font-size: 4rem;
+    font-family: var(--fn-font);
+}
+
+#about h1{
+    font-size: 6.3rem;
+    font-family: var(--sc-font);
+    line-height: 95px;
+    font-weight: 100;
+    -webkit-text-stroke: 1px var(--mn-text-clr);
+    background: linear-gradient(to right, var(--mn-text-clr) 0%, var(--mn-text-clr) 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: pre-line;
+    animation: h1-start 1.5s ease 0s 1 forwards;
+    width: 265px;
+}
+
+#about h1 span{
+    display: inline-block;
+    letter-spacing: 0.2px;
+    transform: translateX(-2.5px);
+    background: inherit;
+}
+
+#specification{
+    color: var(--sc-text-clr);
+    font-size: 1.3rem;
+    margin: 5px 0px;
+    text-shadow: 0px 0px 20px var(--mn-background-clr);
+}
+
+#bio{
+    margin: 10px 0px;
+}
+
+#view-works-button{
+    margin-top: 10px;
+    margin-bottom: 100px;
+    width: 80%;
+    font-weight: bold;
+}
+
+#achievements{
+    grid-area: achievements;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-bottom: 20%;
+    z-index: 1;
+}
+
+#achievements p{
+    font-family: var(--mn-font);
+    color: var(--mn-text-clr);
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    line-height: 25px;
+    text-shadow: 0px 0px 20px var(--mn-background-clr);
+     white-space: pre-line;
+}
+
+#achievements p span{
+    color: var(--sc-text-clr);
+    font-size: 3rem;
+    display: block;
+    line-height: 50px;
+    font-family: var(--sc-font);
+    opacity: 0;
+    animation: light-flicker 1.5s linear 1s 1 forwards;
+}
+
+/* animations ----------------------------------------------------------- */
+
+@keyframes figure-start {
+    0%{
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes h1-start {
+    0%{
+        background-position: right;
+    }
+
+    100%{
+        background-position: left;
+    }
+}
+
+@keyframes nav-start {
+    0%{
+        top: -70px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+
+@keyframes light-flicker {
+0% { opacity: 0; }
+10% { opacity: 1; }
+12% { opacity: 0.2; }
+15% { opacity: 1; }
+18% { opacity: 0.3; }
+22% { opacity: 1; }
+30% { opacity: 0.5; }
+35% { opacity: 1; }
+40% { opacity: 0.7; }
+45% { opacity: 1; }
+100% { opacity: 1; }
+}
+
+/* media settings ------------------------------------------------------- */
+
+@media (min-width: 3500px)
+{
+    header{
+        grid-template-columns: 35% 40% 35%;
+    }
+}
+
+@media (min-width: 2500px)
+{
+    header{
+        grid-template-columns: 25% 50% 25%;
+    }
+}
+
+@media (max-width: 1560px){
+    header{
+        grid-template-columns: 100%;
+        grid-template-rows: 75px 1fr;
+        grid-template-areas: "nav" "intro";
+    }
+}
+
+@media (min-width: 665px) and (max-width: 1050px)
+{
+    #intro{
+        height: auto;
+        grid-template-columns: 5% 40% 1fr 5%;
+        grid-template-rows: auto auto;
+        grid-template-areas: ". about image ." ". achievements achievements .";
+    }
+
+    #view-works-button{
+        width: 90%;
+    }
+
+    #about{
+        margin-top: 0px;
+    }
+
+    #intro figure{
+        position: absolute;
+        width: 120%;
+        right: 0px;
+        top: 50px;
+        right: -10%;
+        align-items: start;
+    }
+
+    #intro figure img{
+        mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    }
+
+    #achievements{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-bottom: 5%;
+        margin-top: 10%;
+    }
+}
+
+@media (max-width: 665px){
+    
+    nav{
+        position: fixed;
+        top: 0px;
+        z-index: 5;
+    }
+
+    #header-options-button{
+        display: block;
+    }
+
+    #about{
+        margin-top: 0px;
+    }
+
+    #intro{
+        height: auto;
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: 250px auto auto;
+        grid-template-areas: "image image image" ". about ." ". achievements .";
+    }
+
+    #view-works-button{
+        margin-bottom: 50px;
+        width: 80%;
+    }
+
+    header{
+        grid-template-rows: 75px auto;
+    }
+
+    #intro figure img{
+        mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    }
+
+    #intro figure{
+        grid-area: image;
+        width: 60%;
+        justify-self: end;
+    }
+
+    #header-options{
+        display: none;
+    }
+
+    nav{
+        grid-template-columns: 20% 80%;
+        grid-template-areas: "logo list";
+        padding: 0px 20px;
+    }
+
+    #achievements{
+    padding-bottom: 5%;
+    margin-top: 10%;
+}
+}
+
+@media (max-width: 500px){
+    #intro figure{
+        width: 75%;
+    }
+}
+
+@media (max-width: 370px){
+    #intro figure{
+        width: 100%;
+    }
+}

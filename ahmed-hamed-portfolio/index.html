@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Ahmed Hamed's portfolio expresses the field he works in, the tools he uses, and his skills in general.">
+
+    <meta name="author" content="Ahmed Hamed">
+
+    <meta name="theme-color" content="black">
+
+    <meta property="og:title" content="Ahmed Hamed's Portfolio">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://res.cloudinary.com/zjdrh3jm/image/upload/v1790729116/7a937e87-3f98-450c-8f65-500183852756.jpg">
+    <meta property="og:description" content="Ahmed Hamed's portfolio expresses the field he works in, the tools he uses, and his skills in general.">
+    <meta property="og:site_name" content="Ahmed Hamed - Motion Graphics Designer & Visual Storyteller">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@MahmoudAyesh25">
+    <meta name="twitter:image" content="https://res.cloudinary.com/zjdrh3jm/image/upload/v1790729116/7a937e87-3f98-450c-8f65-500183852756.jpg">
+    <meta name="twitter:image:alt" content="Image for Ahmed Hamed">
+    <meta name="twitter:title" content="Ahmed Hamed - Motion Graphics Designer & Visual Storyteller">
+    <meta name="twitter:description" content="Ahmed Hamed's portfolio expresses the field he works in, the tools he uses, and his skills in general.">
+
+    <link rel="icon" type="image/svg+xml" href="icons/logo.svg">
+    <link rel="icon" type="image/png" href="icons/logo-web.png">
+    <link rel="apple-touch-icon" sizes="180x180" type="image/png" href="icons/logo-apple.png">
+    <link rel="icon" sizes="192x192" type="image/png" href="icons/logo-android.png">
+
+    <link rel="preload" href="fonts/arimo-v36-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/anton-v27-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/dancing-script-v29-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="dialog.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <script src="script.js" defer></script>
+    <title>Ahmed Hamed</title>
+  </head>
+  <body>
+
+    <header>
+        <nav>
+            <p id="header-icon">AH<span style="color: red">.<span></p>
+            <ul id="header-options">
+                <li><a href="#selected-works-section">WORKS</a></li>
+                <li><a href="#used-tools">APPROACH</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <li><a class="cv-anchor" href="" target="_blank">VIEW CV</a></li>
+            </ul>
+            <button id="header-options-button" aria-label="Open navigation menu">
+                <svg aria-label="List Icon"><use href="icons.svg#list"></use></svg>
+            </button>
+
+        </nav>
+        <div id="intro">
+            <div id="about">
+                <p id="hello">hello, im</p>
+                <h1>AHMED
+                   <span>HAMED</span>
+                </h1>
+                <p id="specification"></p>
+                <p id="about-bio"></p>
+                <button onclick="window.location.href='all-works-page/index.html'" id="view-works-button" aria-label="Go to the Selected Works page">
+                    <svg aria-hidden="true"><use href="icons.svg#right-arrow"></use></svg>
+                    View All Works
+                </button>
+            </div>
+
+            <figure>
+                <img id="main-image" src="" alt="Portrait of Ahmed Hamed">
+            </figure>
+
+            <div id="achievements">
+                <p><span id="experiene-years"></span>YEARS
+                    EXPERIENCE</p>
+                <p><span id="projects-completed"></span>PROJECTS
+                    COMPLETED</p>
+                <p><span id="happy-clients"></span>HAPPY
+                    CLIENTS</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="sections-container">
+            <section id="selected-works-section">
+                <div class="text">
+                    <h2 class="main-text">SELECTED 
+                        WORKS</h2>
+                    <p class="bio-text"><span id="red-part"></span><span id="white-part"></span></p>
+                    <a href="all-works-page/index.html">EXPLORE ALL WORKS
+                        <svg aria-hidden="true"><use href="icons.svg#right-arrow-2"></use></svg>
+                    </a>
+                </div>
+                <div id="selected-works-cards">
+                    <div class="card" id="card1" title="Click to watch the video">
+                        <img loading="lazy" src="" alt="First card of selected works cards">
+                    </div>
+                    <div class="card" id="card2" title="Click to watch the video">
+                        <img loading="lazy" src="" alt="Second card of selected works cards">
+                    </div>
+                    <div class="card" id="card3" title="Click to watch the video">
+                        <img loading="lazy" src="" alt="Third card of selected works cards">
+                    </div>
+                </div>
+            </section>
+
+            <section id="used-tools">
+                <div class="text">
+                    <h2 class="main-text">TOOLS I USE
+                        TO BUILD THE
+                        WORK
+                    </h2>
+
+                    <p class="bio-text" id="tools-bio"></p>
+                </div>
+                <ul id="tools-icons">
+                    <li class="tool">
+                        <div id="after-effects-image"></div>
+                        <p class="tool-title">Adobe After Effects</p>
+                    </li>
+                    <li class="tool">
+                        <div id="illustrator-image"></div>
+                        <p class="tool-title">Adobe Illustrator</p>
+                    </li>
+                    <li class="tool">
+                        <div id="premiere-pro-image"></div>
+                        <p class="tool-title">Adobe Premiere Pro</p>
+                    </li>
+                    <li class="tool">
+                        <div id="photoshop-image"></div>
+                        <p class="tool-title">Adobe Photoshop</p>
+                    </li>
+                    <li class="tool">
+                        <div id="daVinci-resolve-image"></div>
+                        <p class="tool-title">DaVinci Resolve</p>
+                    </li>
+                    <li class="tool">
+                        <div id="moho-image"></div>
+                        <p class="tool-title">Moho</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <section id="contact">
+            <h2 class="main-text">LET<span style="color: red;">'</span>S GET IN TOUCH</h2>
+            <ul id="contact-options">
+                <li>
+                    <a aria-label="Ahmed Hamed on Behance" id="behance-url" class="contant-option" href="" target="_blank">
+                        <svg aria-label="Behance logo"><use href="icons.svg#behance"></use></svg>
+                        <p id="behance-id"></p>
+                    </a>
+                </li>
+                <li>
+                    <a aria-label="Ahmed Hamed on Instagram" id="instagram-url" class="contant-option" href="" target="_blank">
+                        <svg aria-label="Instagram logo"><use href="icons.svg#instagram"></use></svg>
+                        <p id="instagram-id"></p>
+                    </a>
+                </li>
+                <li>
+                    <a aria-label="Ahmed Hamed on Whatsapp" id="whatsapp-url" class="contant-option" href="" target="_blank">
+                        <svg aria-label="Whatsapp logo"><use href="icons.svg#whats-app"></use></svg>
+                        <p id="whatsapp-id"></p>
+                    </a>
+                </li>
+                <li>
+                    <a aria-label="Ahmed Hamed on LinkedIn" id="linkedin-url" class="contant-option" href="" target="_blank">
+                        <svg aria-label="LinkedIn logo"><use href="icons.svg#linked-in"></use></svg>
+                        <p id="linkedin-name"></p>
+                    </a>
+                </li>
+                <li>
+                    <a aria-label="Ahmed Hamed on Facebook" id="facebook-url" class="contant-option" href="" target="_blank">
+                        <svg aria-label="Facebook logo"><use href="icons.svg#facebook"></use></svg>
+                        <p id="facebook-name"></p>
+                    </a>
+                </li>
+                <li>
+                    <a aria-label="Send email to Ahmed Hamed" id="email" class="contant-option" href="">
+                        <svg aria-label="Mail logo"><use href="icons.svg#mail"></use></svg>
+                        <p id="mail-message">Send E-Mail</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <dialog id="options-dialog" aria-label="Navigation menu">
+        <div id="dialog-options-container">
+            <a href="#intro">ABOUT</a>
+            <a href="#selected-works-section">WORKS</a>
+            <a href="#used-tools">APPROACH</a>
+            <a href="#contact">CONTACT</a>
+            <a class="cv-anchor" href="" target="_blank">VIEW CV</a>
+        </div>
+    </dialog>
+
+
+    <dialog id="video-player-dialog" aria-label="Project video preview">
+        <div>
+            <button id="close-dialog">
+                <svg aria-label="Close"><use href="icons.svg#close"></use></svg>
+            </button>
+            <iframe id="video-player"
+            src="" 
+            title="YouTube video player" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen></iframe>
+        </div>
+    </dialog>
+
+  </body>
+</html>

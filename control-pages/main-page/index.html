@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        fieldset{
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+        input{
+            width: 400px;
+        }
+
+        textarea{
+            width: 400px;
+            height: 50px;
+        }
+
+        fieldset fieldset{
+            width: calc(100% - 2rem);
+        }
+
+        button{
+            width: 100px;
+        }
+        #red-part{
+            color: red;
+        }
+
+        label input{
+            width: auto;
+        }
+
+        #select-folder{
+            margin-left: calc(50% - 75px);
+            width: 200px;
+            height: 70px;
+            outline: 3px solid red;
+        }
+    </style>
+    <script src="script.js" defer></script>
+    <title>Main Page Controller</title>
+</head>
+<body>
+    <button id="select-folder">Select Project's Folder</button>
+
+    <fieldset>
+        <legend>Header</legend>
+
+        <label for="cv-url">CV URL</label>
+        <input id="cv-url" type="text">
+        <br>
+        <button onclick="save_header()" id="save-header" >Save</button>
+    </fieldset>
+    <hr>
+    <fieldset>
+        <legend>About</legend>
+
+        <label>Portrait</label>
+        <div>
+            <button onclick="select_thumb(0)">Select File</button>
+            <span id="thumb0-filepath"></span>
+        </div>
+        <br>
+        <label for="specification">Specification</label>
+        <textarea id="specification"></textarea>
+        <br>
+        <label for="about-bio">About's Bio</label>
+        <textarea id="about-bio"></textarea>
+        <br>
+        <label for="experiene-years">Experiene Years</label>
+        <input id="experiene-years" type="number">
+        <br>
+        <label for="projects-completed">Completed Projects</label>
+        <input id="projects-completed" type="number">
+        <br>
+        <label for="happy-clients">Happy Clients</label>
+        <input id="happy-clients" type="number">
+        <br>
+        <button onclick="save_about()" id="save-about" >Save</button>
+    </fieldset>
+    <hr>
+    <fieldset>
+        <legend>Selected Works Text</legend>
+
+        <label for="selected-works-bio-red-part">Selected Works Bio - <span id="red-part">Red Part</span></label>
+        <textarea id="selected-works-bio-red-part"></textarea>
+        <br>
+        <label for="selected-works-bio-white-part">Selected Works Bio - White Part</label>
+        <textarea id="selected-works-bio-white-part"></textarea>
+        <br>
+        <button onclick="save_selected_works_text()" id="save-selected-works-text" >Save</button>
+    </fieldset>
+    <hr>
+    <fieldset>
+        <legend>Selected Works Projects</legend>
+
+        <fieldset>
+            <legend>Front Work</legend>
+
+            <label for="work1-title">Title</label>
+            <input id="work1-title" type="text">
+            <br>
+            <label>Thumbnail</label>
+            <div>
+                <button onclick="select_thumb(1)" id="thump1-selectfile">Select File</button>
+                <span id="thumb1-filepath"></span>
+            </div>
+            <br>
+            <label for="video1-url">Video URL</label>
+            <input id="video1-url" type="text">
+            <br>
+            <label for="alt1">Alternate</label>
+            <input id="alt1" type="text" placeholder="Write a brief description of the work...">
+            <br>
+            <label for="is-short1">
+                <input id="is-short1" type="checkbox">
+                Is Short
+            </label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Middle Work</legend>
+
+            <label for="work2-title">Title</label>
+            <input id="work2-title" type="text">
+            <br>
+            <label>Thumbnail</label>
+            <div>
+                <button onclick="select_thumb(2)" id="thump2-selectfile">Select File</button>
+                <span id="thumb2-filepath"></span>
+            </div>
+            <br>
+            <label for="video2-url">Video URL</label>
+            <input id="video2-url" type="text">
+            <br>
+            <label for="alt2">Alternate</label>
+            <input id="alt2" type="text" placeholder="Write a brief description of the work...">
+            <br>
+            <label for="is-short2">
+                <input id="is-short2" type="checkbox">
+                Is Short
+            </label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Back Work</legend>
+
+            <label for="work3-title">Title</label>
+            <input id="work3-title" type="text">
+            <br>
+            <label>Thumbnail</label>
+            <div>
+                <button onclick="select_thumb(3)" id="thump3-selectfile">Select File</button>
+                <span id="thumb3-filepath"></span>
+            </div>
+            <br>
+            <label for="video3-url">Video URL</label>
+            <input id="video3-url" type="text">
+            <br>
+            <label for="alt3">Alternate</label>
+            <input id="alt3" type="text" placeholder="Write a brief description of the work...">
+            <br>
+            <label for="is-short3">
+                <input id="is-short3" type="checkbox">
+                Is Short
+            </label>
+        </fieldset>
+        <br>
+        <button onclick="save_selected_works()" id="save-selected-words" >Save</button>
+    </fieldset>
+    <hr>
+    <fieldset>
+        <legend>Tools</legend>
+
+        <label for="tools-bio">Tools Bio</label>
+        <textarea id="tools-bio"></textarea>
+        <br>
+        <button onclick="save_tools()" id="save-tools" >Save</button>
+    </fieldset>
+    <hr>
+    <fieldset>
+        <legend>Contacts</legend>
+
+        <fieldset>
+            <legend>Behance</legend>
+
+            <label for="behance-id">Behance ID</label>
+            <input id="behance-id" type="text">
+            <br>
+            <label for="behance-url">Behance URL</label>
+            <input id="behance-url" type="text">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Instagram</legend>
+
+            <label for="instagram-id">Instagram ID</label>
+            <input id="instagram-id" type="text">
+            <br>
+            <label for="instagram-url">Instagram URL</label>
+            <input id="instagram-url" type="text">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Whatsapp</legend>
+
+            <label for="whatsapp-id">Whatsapp ID</label>
+            <input id="whatsapp-id" type="text">
+            <br>
+            <label for="whatsapp-url">Whatsapp URL</label>
+            <input id="whatsapp-url" type="text">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>LinkedIn</legend>
+
+            <label for="linkedin-name">LinkedIn Name</label>
+            <input id="linkedin-name" type="text">
+            <br>
+            <label for="linkedin-url">LinkedIn URL</label>
+            <input id="linkedin-url" type="text">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Facebook</legend>
+
+            <label for="facebook-name">Facebook Name</label>
+            <input id="facebook-name" type="text">
+            <br>
+            <label for="facebook-url">Facebook URL</label>
+            <input id="facebook-url" type="text">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>E-Mail</legend>
+
+            <label for="email">E-Mail</label>
+            <input id="email" type="email">
+        </fieldset>
+        <br>
+        <button onclick="save_contacts()" id="save-contacts">Save</button>
+    </fieldset>
+</body>
+</html>

@@ -1,0 +1,90 @@
+footer{
+    grid-area: footer;
+    padding: 100px 0px;
+
+    display: grid;
+    grid-template-columns: 5% 15% 60% 15% 5%;
+    grid-template-areas: ". . section . .";
+    height: fit-content;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    z-index: 1;
+    position: relative;
+
+    background-image:
+    radial-gradient(circle at 20% 20%, rgba(34, 45, 48, 0.452), transparent 50%),
+    radial-gradient(circle at 80% 75%, rgba(241, 99, 99, 0.13), transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(42, 15, 15, 0.2), transparent 50%);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#contact{
+    grid-area: section;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#contact-options{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.contant-option{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 2);
+}
+
+.contant-option p{
+    text-align: center;
+}
+
+.contant-option svg{
+    width: 100px;
+    height: 100px;
+    fill: var(--mn-text-clr);
+    transition: 0.2s;
+}
+
+.contant-option:hover{
+    scale: 1.1;
+}
+
+.contant-option:hover svg{
+    fill: var(--mn-theme-clr);
+    transform: rotate(3deg);
+}
+
+@media (min-width: 2500px)
+{
+    footer{
+        grid-template-columns: 5% 22.5% 45% 22.5% 5%;
+    }
+}
+
+@media (max-width: 1560px)
+{
+    footer{
+        grid-template-columns: 5% 90% 5%;
+        grid-template-areas: ". section .";
+    }
+}
+
+@media (max-width: 1035px){
+    #contact-options{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 440px){
+    #contact-options{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
